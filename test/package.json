@@ -5,7 +5,8 @@
   "main": "wdio.conf.js",
   "dependencies": {
     "wdio-mocha-framework": "^0.5.10",
-    "webdriverio": "^4.8.0"
+    "webdriverio": "^4.8.0",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "wdio-selenium-standalone-service": "0.0.9",
@@ -13,8 +14,11 @@
     "wdio-visual-regression-service": "^0.8.0"
   },
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "snyk": true
 }
